@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+🎫 Ticket Dashboard
 
-## Project info
+A mini project management dashboard inspired by Trello and Atlassian — featuring email-based OTP authentication, real-time ticket management, super-user controls, and live notifications for active users.
 
-**URL**: https://lovable.dev/projects/1e120dbe-53b6-4389-ab31-852747e2b0e0
+🚀 Features Overview
+🧩 Authentication
 
-## How can I edit this code?
+Email-based OTP login (no passwords).
 
-There are several ways of editing your application.
+Post-login redirect to the main ticket dashboard.
 
-**Use Lovable**
+📁 Projects & Tickets
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1e120dbe-53b6-4389-ab31-852747e2b0e0) and start prompting.
+View all existing projects on the dashboard.
 
-Changes made via Lovable will be committed automatically to this repo.
+Create a new project if none exist.
 
-**Use your preferred IDE**
+Each project supports multiple tickets with title, description, and status.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Real-time synchronization: Any ticket movement or update instantly reflects for all active users.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Super-user toggle:
 
-Follow these steps:
+ON → Shows who created/updated each ticket.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+OFF → Hides user details.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Turning ON requires entering a super-user password.
 
-# Step 3: Install the necessary dependencies.
-npm i
+🔔 Notifications & Updates
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Activity Feed: Displays all ticket updates in real time for active users.
 
-**Edit a file directly in GitHub**
+UI Notifications: Shown instantly on the dashboard for online users.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Email Notifications: Sent to users who are offline when updates occur.
 
-**Use GitHub Codespaces**
+🧱 Tech Stack
+🖥️ Frontend
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Framework: React (with TypeScript) / Next.js
 
-## What technologies are used for this project?
+State Management: Zustand (lightweight and reactive)
 
-This project is built with:
+Styling: Tailwind CSS
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Key Features:
 
-## How can I deploy this project?
+Project List & Project Detail Pages
 
-Simply open [Lovable](https://lovable.dev/projects/1e120dbe-53b6-4389-ab31-852747e2b0e0) and click on Share -> Publish.
+Ticket Kanban Board (drag-and-drop functionality)
 
-## Can I connect a custom domain to my Lovable project?
+Super-user toggle modal with password input
 
-Yes, you can!
+Real-time notifications via WebSockets
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Clean and minimal UI based on provided Figma design
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+⚙️ Backend
+
+Framework: Node.js (with NestJS or Express + TypeScript)
+
+Database: MongoDB (via Mongoose ORM)
+
+Design Patterns Used:
+
+Strategy Pattern for Notification System (UI vs Email strategy)
+
+Factory Pattern for Ticket creation
+
+Key Features:
+
+Secure OTP-based login with email
+
+Role-based control for Super-user
+
+Real-time updates via Socket.io
+
+Efficient DB schema for projects, tickets, users, and notifications
