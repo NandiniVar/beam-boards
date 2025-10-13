@@ -7,7 +7,7 @@ A mini project management dashboard inspired by Trello and Atlassian — featuri
 
 Email-based OTP login (no passwords).
 
-Post-login redirect to the main ticket dashboard.
+Post-login redirect to the main dashboard.
 
 📁 Projects & Tickets
 
